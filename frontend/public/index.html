@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Meta Tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   
+    <!-- SEO Meta Tags -->
+    <title>🎧 Audio & Video Translator - Breaking Language Barriers in Education</title>
+    <meta name="description" content="AI-powered Audio & Video Translation System for Multilingual Education. Convert English audio and video content to Hindi, Marathi, Tamil, Telugu, Bengali, and Gujarati. Breaking language barriers with advanced speech-to-text and translation technology." />
+    <meta name="keywords" content="audio translation, video translation, speech to text, multilingual education, hindi translation, marathi translation, tamil translation, telugu translation, bengali translation, gujarati translation, language converter, education technology, accessibility, AI translation, voice recognition, educational tools, language learning, regional languages India" />
+    <meta name="author" content="Audio Video Translator Team" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+    <link rel="canonical" href="%PUBLIC_URL%" />
+
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="🎧 Audio & Video Translator - Breaking Language Barriers in Education" />
+    <meta property="og:description" content="Convert English audio and video to 6+ regional languages including Hindi, Marathi, Tamil, Telugu, Bengali, and Gujarati. AI-powered translation for accessible education." />
+    <meta property="og:url" content="%PUBLIC_URL%" />
+    <meta property="og:site_name" content="Audio & Video Translator" />
+    <meta property="og:image" content="%PUBLIC_URL%/social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Audio & Video Translator - Multilingual Education Platform" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@audiotranslator" />
+    <meta name="twitter:creator" content="@audiotranslator" />
+    <meta name="twitter:title" content="🎧 Audio & Video Translator - AI Translation for Education" />
+    <meta name="twitter:description" content="Convert English audio/video to regional languages. Supporting Hindi, Marathi, Tamil, Telugu, Bengali, Gujarati for accessible education." />
+    <meta name="twitter:image" content="%PUBLIC_URL%/social-preview.png" />
+    <meta name="twitter:image:alt" content="Audio Video Translator Interface" />
+
+    <!-- Progressive Web App Meta Tags -->
+    <meta name="theme-color" content="#667eea" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Audio Translator" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="msapplication-TileColor" content="#667eea" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <!-- Icons and Manifest -->
+    <link rel="icon" type="image/x-icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="57x57" href="%PUBLIC_URL%/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="%PUBLIC_URL%/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="%PUBLIC_URL%/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="%PUBLIC_URL%/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="%PUBLIC_URL%/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="%PUBLIC_URL%/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="%PUBLIC_URL%/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="%PUBLIC_URL%/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="%PUBLIC_URL%/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="%PUBLIC_URL%/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Performance Optimizations - Preconnections -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="preconnect" href="https://api.audiotranslator.com" />
+
+    <!-- Google Fonts Integration -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Critical CSS for Performance -->
+    <style>
+      /* CSS Reset and Critical Styles */
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        --text-primary: #1f2937;
+        --text-secondary: #6b7280;
+        --bg-white: #ffffff;
+        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      }
+
+      html {
+        font-size: 16px;
+        scroll-behavior: smooth;
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background: var(--primary-gradient);
+        min-height: 100vh;
+        line-height: 1.6;
+        color: var(--text-primary);
+        overflow-x: hidden;
+      }
+
+      #root {
+        min-height: 100vh;
+        position: relative;
+      }
+
+      /* Hero Image Styles */
+      .hero-image {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 24px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        padding: 20px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        animation: float 3s ease-in-out infinite;
+      }
+
+      .hero-image svg {
+        width: 100%;
+        height: 100%;
+        filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+      }
+
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+
+      /* Loading States */
+      .loading-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        flex-direction: column;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        position: relative;
+      }
+
+      .loading-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 70%);
+        pointer-events: none;
+      }
+
+      .loading-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .loading-spinner {
+        width: 64px;
+        height: 64px;
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        border-top: 4px solid #ffffff;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-bottom: 32px;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      .loading-container h2 {
+        font-size: 1.875rem;
+        margin-bottom: 12px;
+        font-weight: 600;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        letter-spacing: -0.025em;
+      }
+
+      .loading-container p {
+        font-size: 1.125rem;
+        opacity: 0.9;
+        font-weight: 300;
+        margin-bottom: 16px;
+      }
+
+      .loading-progress {
+        font-size: 0.875rem;
+        opacity: 0.8;
+        font-style: italic;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% { opacity: 0.8; }
+        50% { opacity: 0.4; }
+      }
+
+      /* No JavaScript Fallback */
+      .no-js {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        flex-direction: column;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        background: var(--primary-gradient);
+        position: relative;
+      }
+
+      .no-js::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+        opacity: 0.3;
+        pointer-events: none;
+      }
+
+      .no-js-content {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+      }
+
+      .no-js h1 {
+        font-size: 2.5rem;
+        margin-bottom: 24px;
+        font-weight: 700;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        letter-spacing: -0.025em;
+      }
+
+      .no-js .subtitle {
+        font-size: 1.25rem;
+        margin-bottom: 32px;
+        opacity: 0.9;
+        font-weight: 500;
+        color: #fbbf24;
+      }
+
+      .no-js p {
+        font-size: 1.125rem;
+        margin-bottom: 20px;
+        opacity: 0.9;
+        line-height: 1.7;
+      }
+
+      .features-list {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        padding: 24px;
+        margin: 32px 0;
+        text-align: left;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .features-list h3 {
+        font-size: 1.375rem;
+        margin-bottom: 16px;
+        text-align: center;
+        color: #fbbf24;
+        font-weight: 600;
+      }
+
+      .features-list ul {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 12px;
+      }
+
+      .features-list li {
+        padding: 8px 0;
+        opacity: 0.9;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .language-support {
+        margin-top: 24px;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .language-support h4 {
+        font-size: 1.125rem;
+        margin-bottom: 12px;
+        color: #a78bfa;
+        font-weight: 600;
+      }
+
+      .languages {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+      }
+
+      .language-tag {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      /* Error Container */
+      .error-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        flex-direction: column;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      }
+
+      .error-container h1 {
+        font-size: 2.25rem;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      .error-container button {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border: 2px solid white;
+        padding: 12px 24px;
+        border-radius: 12px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: 20px;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .error-container button:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Accessibility Improvements */
+      @media (prefers-reduced-motion: reduce) {
+        .loading-spinner, .hero-image {
+          animation: none;
+        }
+       
+        .loading-progress {
+          animation: none;
+        }
+       
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+       
+        html {
+          scroll-behavior: auto;
+        }
+      }
+
+      @media (prefers-contrast: high) {
+        :root {
+          --primary-gradient: linear-gradient(135deg, #000080 0%, #4b0082 100%);
+        }
+       
+        .no-js, .loading-container {
+          background: linear-gradient(135deg, #000080 0%, #4b0082 100%);
+        }
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .features-list {
+          background: rgba(0, 0, 0, 0.2);
+        }
+       
+        .language-support {
+          background: rgba(0, 0, 0, 0.1);
+        }
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        .hero-image {
+          width: 100px;
+          height: 100px;
+          padding: 16px;
+          margin-bottom: 20px;
+        }
+
+        .loading-container h2 {
+          font-size: 1.5rem;
+        }
+       
+        .loading-container p {
+          font-size: 1rem;
+        }
+       
+        .no-js h1 {
+          font-size: 2rem;
+        }
+       
+        .no-js .subtitle {
+          font-size: 1.125rem;
+        }
+       
+        .features-list ul {
+          grid-template-columns: 1fr;
+        }
+       
+        .languages {
+          gap: 6px;
+        }
+       
+        .language-tag {
+          font-size: 0.8rem;
+          padding: 4px 8px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero-image {
+          width: 80px;
+          height: 80px;
+          padding: 12px;
+        }
+
+        .loading-spinner {
+          width: 48px;
+          height: 48px;
+        }
+       
+        .no-js h1 {
+          font-size: 1.75rem;
+        }
+       
+        .features-list {
+          padding: 16px;
+          margin: 20px 0;
+        }
+      }
+
+      /* Print Styles */
+      @media print {
+        .loading-container,
+        .no-js {
+          display: none;
+        }
+       
+        body {
+          background: white;
+          color: black;
+        }
+      }
+    </style>
+  </head>
+ 
+  <body>
+    <!-- No JavaScript Fallback -->
+    <noscript>
+      <div class="no-js">
+        <div class="no-js-content">
+          <!-- Hero Image/Icon -->
+          <div class="hero-image">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Microphone Base -->
+              <ellipse cx="50" cy="85" rx="20" ry="8" fill="rgba(255,255,255,0.8)"/>
+              <!-- Microphone Stand -->
+              <rect x="47" y="65" width="6" height="20" fill="rgba(255,255,255,0.9)"/>
+              <!-- Microphone Body -->
+              <rect x="35" y="20" width="30" height="45" rx="15" fill="rgba(255,255,255,0.95)"/>
+              <!-- Microphone Grille -->
+              <circle cx="50" cy="35" r="3" fill="rgba(102,126,234,0.8)"/>
+              <circle cx="50" cy="45" r="3" fill="rgba(102,126,234,0.8)"/>
+              <circle cx="50" cy="55" r="3" fill="rgba(102,126,234,0.8)"/>
+              <!-- Sound Waves -->
+              <path d="M70 35 Q75 35 75 42.5 Q75 50 70 50" stroke="rgba(255,255,255,0.7)" stroke-width="3" fill="none"/>
+              <path d="M75 30 Q82 30 82 42.5 Q82 55 75 55" stroke="rgba(255,255,255,0.6)" stroke-width="2" fill="none"/>
+              <path d="M30 35 Q25 35 25 42.5 Q25 50 30 50" stroke="rgba(255,255,255,0.7)" stroke-width="3" fill="none"/>
+              <path d="M25 30 Q18 30 18 42.5 Q18 55 25 55" stroke="rgba(255,255,255,0.6)" stroke-width="2" fill="none"/>
+              <!-- Language Symbols -->
+              <text x="50" y="15" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-size="8" font-weight="bold">🌍</text>
+            </svg>
+          </div>
+
+          <h1>🎧 Audio & Video Translator</h1>
+          <p class="subtitle">⚠️ JavaScript Required for Full Functionality</p>
+         
+          <p>
+            This application requires JavaScript to provide its full range of features.
+            Please enable JavaScript in your browser settings and refresh the page to access
+            our AI-powered translation capabilities.
+          </p>
+
+          <div class="features-list">
+            <h3>🌟 Available Features with JavaScript Enabled:</h3>
+            <ul>
+              <li>📁 Upload audio and video files (MP3, WAV, MP4, AVI, MOV)</li>
+              <li>🎤 AI-powered speech-to-text conversion</li>
+              <li>🌍 Translate to 6+ regional languages</li>
+              <li>🔊 Generate audio in target language</li>
+              <li>📱 Mobile-responsive interface</li>
+              <li>💾 Download translation results</li>
+              <li>📊 Real-time processing status</li>
+              <li>🔄 Translation history</li>
+            </ul>
+          </div>
+
+          <div class="language-support">
+            <h4>🗣️ Supported Languages:</h4>
+            <div class="languages">
+              <span class="language-tag">Hindi (हिन्दी)</span>
+              <span class="language-tag">Marathi (मराठी)</span>
+              <span class="language-tag">Tamil (தமிழ்)</span>
+              <span class="language-tag">Telugu (తెలుగు)</span>
+              <span class="language-tag">Bengali (বাংলা)</span>
+              <span class="language-tag">Gujarati (ગુજરાતી)</span>
+            </div>
+          </div>
+
+          <p style="margin-top: 32px; font-size: 1rem; opacity: 0.8;">
+            <strong>How to Enable JavaScript:</strong><br>
+            Chrome/Edge: Settings → Privacy and Security → Site Settings → JavaScript<br>
+            Firefox: Settings → Privacy & Security → Permissions → Block websites from...<br>
+            Safari: Preferences → Security → Enable JavaScript
+          </p>
+        </div>
+      </div>
+    </noscript>
+   
+    <!-- Main React App Container -->
+    <div id="root">
+      <!-- Loading State While React App Initializes -->
+      <div class="loading-container" id="initial-loader">
+        <div class="loading-content">
+          <!-- Hero Image/Icon for Loading State -->
+          <div class="hero-image">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Microphone Base -->
+              <ellipse cx="50" cy="85" rx="20" ry="8" fill="rgba(255,255,255,0.8)"/>
+              <!-- Microphone Stand -->
+              <rect x="47" y="65" width="6" height="20" fill="rgba(255,255,255,0.9)"/>
+              <!-- Microphone Body -->
+              <rect x="35" y="20" width="30" height="45" rx="15" fill="rgba(255,255,255,0.95)"/>
+              <!-- Microphone Grille -->
+              <circle cx="50" cy="35" r="3" fill="rgba(102,126,234,0.8)"/>
+              <circle cx="50" cy="45" r="3" fill="rgba(102,126,234,0.8)"/>
+              <circle cx="50" cy="55" r="3" fill="rgba(102,126,234,0.8)"/>
+              <!-- Animated Sound Waves -->
+              <path d="M70 35 Q75 35 75 42.5 Q75 50 70 50" stroke="rgba(255,255,255,0.7)" stroke-width="3" fill="none" opacity="0.7">
+                <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+              </path>
+              <path d="M75 30 Q82 30 82 42.5 Q82 55 75 55" stroke="rgba(255,255,255,0.6)" stroke-width="2" fill="none" opacity="0.5">
+                <animate attributeName="opacity" values="0.2;0.8;0.2" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+              </path>
+              <path d="M30 35 Q25 35 25 42.5 Q25 50 30 50" stroke="rgba(255,255,255,0.7)" stroke-width="3" fill="none" opacity="0.7">
+                <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="1s" repeatCount="indefinite"/>
+              </path>
+              <path d="M25 30 Q18 30 18 42.5 Q18 55 25 55" stroke="rgba(255,255,255,0.6)" stroke-width="2" fill="none" opacity="0.5">
+                <animate attributeName="opacity" values="0.2;0.8;0.2" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+              </path>
+              <!-- Language Symbol -->
+              <text x="50" y="15" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-size="8" font-weight="bold">🌍</text>
+            </svg>
+          </div>
+          
+          <div class="loading-spinner"></div>
+          <h2>🎧 Loading Audio & Video Translator</h2>
+          <p>Breaking language barriers in education</p>
+          <div class="loading-progress">Initializing translation engine...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Structured Data for SEO (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Audio & Video Translator",
+      "alternateName": "Multilingual Education Translator",
+      "description": "AI-powered translation system for converting English audio and video content to regional languages including Hindi, Marathi, Tamil, Telugu, Bengali, and Gujarati",
+      "url": "%PUBLIC_URL%",
+      "applicationCategory": "EducationApplication",
+      "operatingSystem": "Web Browser",
+      "browserRequirements": "JavaScript enabled, HTML5 support",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/OnlineOnly"
+      },
+      "featureList": [
+        "Speech-to-Text Conversion",
+        "Multi-language Translation",
+        "Text-to-Speech Generation",
+        "Audio File Upload Support",
+        "Video File Upload Support",
+        "Mobile Responsive Design",
+        "Real-time Processing",
+        "Download Translation Results"
+      ],
+      "supportedLanguage": [
+        {"@type": "Language", "name": "English", "alternateName": "en"},
+        {"@type": "Language", "name": "Hindi", "alternateName": "hi"},
+        {"@type": "Language", "name": "Marathi", "alternateName": "mr"},
+        {"@type": "Language", "name": "Tamil", "alternateName": "ta"},
+        {"@type": "Language", "name": "Telugu", "alternateName": "te"},
+        {"@type": "Language", "name": "Bengali", "alternateName": "bn"},
+        {"@type": "Language", "name": "Gujarati", "alternateName": "gu"}
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "Audio Video Translator Team"
+      },
+      "datePublished": "2024-01-01",
+      "dateModified": "2024-12-01",
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "audience": {
+        "@type": "Audience",
+        "audienceType": ["Students", "Educators", "Content Creators"]
+      }
+    }
+    </script>
+
+    <!-- Performance Monitoring & App Initialization -->
+    <script>
+      // Performance timing
+      const perfStart = performance.now();
+     
+      // Remove loading screen when React app loads
+      let loadingRemoved = false;
+     
+      function removeLoader() {
+        if (loadingRemoved) return;
+       
+        const loader = document.getElementById('initial-loader');
+        const appContent = document.querySelector('.App');
+       
+        if (loader && appContent) {
+          loadingRemoved = true;
+          loader.style.opacity = '0';
+          loader.style.transition = 'opacity 0.5s ease-out';
+         
+          setTimeout(() => {
+            if (loader && loader.parentNode) {
+              loader.parentNode.removeChild(loader);
+            }
+          }, 500);
+        }
+      }
+
+      // Multiple triggers for loader removal
+      document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(removeLoader, 2000);
+      });
+     
+      window.addEventListener('load', () => {
+        setTimeout(removeLoader, 1500);
+      });
+
+      // React app detection
+      const checkReactApp = setInterval(() => {
+        if (document.querySelector('.App')) {
+          removeLoader();
+          clearInterval(checkReactApp);
+        }
+      }, 100);
+
+      // Clear check after 10 seconds to prevent infinite checking
+      setTimeout(() => clearInterval(checkReactApp), 10000);
+
+      // Global error handler for script loading failures
+      window.addEventListener('error', function(e) {
+        if (e.target && e.target.tagName === 'SCRIPT') {
+          console.error('❌ Failed to load script:', e.target.src);
+         
+          const root = document.getElementById('root');
+          if (root) {
+            root.innerHTML = `
+              <div class="error-container">
+                <div class="hero-image">
+                  <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+                    <path d="M35 35 L65 65 M65 35 L35 65" stroke="rgba(255,255,255,0.8)" stroke-width="4" stroke-linecap="round"/>
+                    <text x="50" y="85" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="8">ERROR</text>
+                  </svg>
+                </div>
+                <h1>🚫 Loading Failed</h1>
+                <p><strong>Unable to load the application resources.</strong></p>
+                <p>This might be due to:</p>
+                <ul style="text-align: left; margin: 20px 0; max-width: 400px;">
+                  <li>• Poor internet connection</li>
+                  <li>• Server maintenance</li>
+                  <li>• Browser compatibility issues</li>
+                  <li>• Ad blockers or security software</li>
+                  <li>• JavaScript disabled</li>
+                </ul>
+                <button onclick="window.location.reload()" type="button">
+                  🔄 Reload Application
+                </button>
+                <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 20px; max-width: 500px;">
+                  If the problem persists, try clearing your browser cache, disabling ad blockers,
+                  or using a different browser. For support, please check our documentation.
+                </p>
+              </div>
+            `;
+          }
+        }
+      });
+
+      // Performance monitoring
+      window.addEventListener('load', function() {
+        if ('performance' in window && 'timing' in performance) {
+          setTimeout(() => {
+            const perfData = performance.timing;
+            const loadTime = perfData.loadEventEnd - perfData.navigationStart;
+            const domReady = perfData.domContentLoadedEventEnd - perfData.navigationStart;
+            const appLoadTime = performance.now() - perfStart;
+           
+            console.log('📊 Performance Metrics:');
+            console.log(`   Total Load Time: ${loadTime}ms`);
+            console.log(`   DOM Ready Time: ${domReady}ms`);
+            console.log(`   App Init Time: ${Math.round(appLoadTime)}ms`);
+           
+            // Send to analytics if available
+            if (typeof gtag !== 'undefined') {
+              gtag('event', 'timing_complete', {
+                name: 'load',
+                value: loadTime
+              });
+            }
+          }, 0);
+        }
+      });
+
+      // Service Worker registration for PWA
+      if ('serviceWorker' in navigator && window.location.protocol === 'https:') {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('%PUBLIC_URL%/service-worker.js')
+            .then(registration => {
+              console.log('✅ PWA Service Worker registered:', registration.scope);
+             
+              // Update available notification
+              registration.addEventListener('updatefound', () => {
+                console.log('🔄 PWA update available');
+              });
+            })
+            .catch(registrationError => {
+              console.log('❌ PWA Service Worker registration failed:', registrationError);
+            });
+        });
+      }
+
+      // Online/Offline status monitoring
+      let offlineMessage = null;
+     
+      function updateOnlineStatus() {
+        const isOnline = navigator.onLine;
+        console.log(isOnline ? '🟢 Online' : '🔴 Offline');
+       
+        if (!isOnline && !offlineMessage) {
+          offlineMessage = document.createElement('div');
+          offlineMessage.id = 'offline-banner';
+          offlineMessage.innerHTML = `
+            <div style="
+              position: fixed;
+              top: 0;
+              left: 0;
+              right: 0;
+              background: linear-gradient(90deg, #f59e0b 0%, #d97706 100%);
+              color: white;
+              text-align: center;
+              padding: 12px 20px;
+              z-index: 9999;
+              font-weight: 500;
+              box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+              animation: slideDown 0.3s ease-out;
+            ">
+              ⚠️ You are currently offline. Some features may not work properly.
+              <button onclick="window.location.reload()" style="
+                margin-left: 15px;
+                background: rgba(255,255,255,0.2);
+                border: 1px solid rgba(255,255,255,0.5);
+                color: white;
+                padding: 4px 12px;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 12px;
+              ">Retry</button>
+            </div>
+          `;
+          document.body.appendChild(offlineMessage);
+        } else if (isOnline && offlineMessage) {
+          offlineMessage.remove();
+          offlineMessage = null;
+        }
+      }
+
+      // Monitor connectivity
+      window.addEventListener('online', updateOnlineStatus);
+      window.addEventListener('offline', updateOnlineStatus);
+     
+      // Initial connectivity check
+      updateOnlineStatus();
+
+      // PWA Install Prompt
+      let deferredPrompt;
+     
+      window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        console.log('💾 PWA install prompt available');
+      });
+     
+      window.addEventListener('appinstalled', () => {
+        console.log('📱 PWA installed successfully');
+        deferredPrompt = null;
+      });
+
+      // Expose install function globally
+      window.installPWA = function() {
+        if (deferredPrompt) {
+          deferredPrompt.prompt();
+          deferredPrompt.userChoice.then((choiceResult) => {
+            if (choiceResult.outcome === 'accepted') {
+              console.log('✅ User accepted the PWA install prompt');
+            } else {
+              console.log('❌ User dismissed the PWA install prompt');
+            }
+            deferredPrompt = null;
+          });
+        } else {
+          console.log('⚠️ PWA install prompt not available');
+        }
+      };
+
+      // Keyboard shortcuts
+      document.addEventListener('keydown', function(e) {
+        // Ctrl+K or Cmd+K for search/focus
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+          e.preventDefault();
+          const searchInput = document.querySelector('input[type="search"], input[placeholder*="search"]');
+          if (searchInput) {
+            searchInput.focus();
+          }
+        }
+        
+        // Escape to clear focus
+        if (e.key === 'Escape') {
+          if (document.activeElement) {
+            document.activeElement.blur();
+          }
+        }
+      });
+
+      // Theme detection and system preference handling
+      function detectSystemTheme() {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      }
+
+      // Listen for theme changes
+      if (window.matchMedia) {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', detectSystemTheme);
+      }
+
+      // Initial theme detection
+      detectSystemTheme();
+
+      // Analytics and user tracking (if enabled)
+      function trackUserEngagement() {
+        let startTime = Date.now();
+        let isUserActive = true;
+        let maxScrollDepth = 0;
+
+        // Track scroll depth
+        function updateScrollDepth() {
+          const scrollDepth = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+          maxScrollDepth = Math.max(maxScrollDepth, Math.round(scrollDepth));
+        }
+
+        // Track user activity
+        function resetActivityTimer() {
+          isUserActive = true;
+        }
+
+        // User activity events
+        ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart'].forEach(event => {
+          document.addEventListener(event, resetActivityTimer, true);
+        });
+
+        window.addEventListener('scroll', updateScrollDepth);
+
+        // Track session end
+        window.addEventListener('beforeunload', () => {
+          const sessionDuration = Date.now() - startTime;
+          
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'session_complete', {
+              session_duration: Math.round(sessionDuration / 1000),
+              max_scroll_depth: maxScrollDepth,
+              user_was_active: isUserActive
+            });
+          }
+        });
+
+        // Track page visibility changes
+        document.addEventListener('visibilitychange', () => {
+          if (document.visibilityState === 'hidden') {
+            isUserActive = false;
+          }
+        });
+      }
+
+      // Initialize engagement tracking
+      trackUserEngagement();
+
+      // Feature detection and progressive enhancement
+      function enhanceWithModernFeatures() {
+        // Check for Intersection Observer support
+        if ('IntersectionObserver' in window) {
+          document.documentElement.classList.add('intersection-observer');
+        }
+
+        // Check for CSS Grid support
+        if (CSS.supports('display', 'grid')) {
+          document.documentElement.classList.add('css-grid');
+        }
+
+        // Check for Web Audio API
+        if ('AudioContext' in window || 'webkitAudioContext' in window) {
+          document.documentElement.classList.add('web-audio');
+        }
+
+        // Check for File API support
+        if ('FileReader' in window && 'File' in window && 'FileList' in window) {
+          document.documentElement.classList.add('file-api');
+        }
+
+        // Check for WebRTC support
+        if ('mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices) {
+          document.documentElement.classList.add('webrtc');
+        }
+
+        console.log('🔧 Feature detection complete:', document.documentElement.className);
+      }
+
+      // Run feature detection
+      enhanceWithModernFeatures();
+
+      // Lazy loading polyfill for older browsers
+      if ('loading' in HTMLImageElement.prototype) {
+        console.log('✅ Native lazy loading supported');
+      } else {
+        console.log('⚠️ Native lazy loading not supported - consider polyfill');
+      }
+
+      // Console welcome message
+      console.log(`
+        🎧 Audio & Video Translator
+        ========================
+        
+        Welcome to our multilingual education platform!
+        
+        🌟 Features:
+        • AI-powered speech recognition
+        • Multi-language translation
+        • Text-to-speech synthesis
+        • Progressive Web App
+        
+        🔧 Developer Info:
+        • Built with modern web standards
+        • Fully responsive design
+        • Accessibility compliant
+        • PWA enabled
+        
+        📊 Performance: ${Math.round(performance.now() - perfStart)}ms initialization
+        
+        For support: https://github.com/audio-translator
+      `);
+
+      // Development helpers (only in development)
+      if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+        window.dev = {
+          clearCache: () => {
+            if ('caches' in window) {
+              caches.keys().then(names => {
+                names.forEach(name => caches.delete(name));
+              });
+            }
+            localStorage.clear();
+            sessionStorage.clear();
+            console.log('🧹 Cache cleared');
+          },
+          
+          mockOffline: () => {
+            window.dispatchEvent(new Event('offline'));
+            console.log('🔴 Offline mode simulated');
+          },
+          
+          mockOnline: () => {
+            window.dispatchEvent(new Event('online'));
+            console.log('🟢 Online mode restored');
+          },
+
+          installPWA: window.installPWA
+        };
+
+        console.log('🛠️ Development helpers available via window.dev');
+      }
+    </script>
+
+    <!-- Fallback for very old browsers -->
+    <!--[if lt IE 11]>
+    <div style="
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      z-index: 10000;
+    ">
+      <h1>⚠️ Browser Not Supported</h1>
+      <p>This application requires a modern web browser.</p>
+      <p>Please upgrade to:</p>
+      <ul style="text-align: left; margin: 20px 0;">
+        <li>Chrome 70+</li>
+        <li>Firefox 65+</li>
+        <li>Safari 12+</li>
+        <li>Edge 79+</li>
+      </ul>
+      <p>Your current browser is not compatible with our advanced audio processing features.</p>
+    </div>
+    <![endif]-->
+  </body>
+</html>
