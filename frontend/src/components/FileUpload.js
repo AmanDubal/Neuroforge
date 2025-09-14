@@ -6,6 +6,9 @@ const FileUpload = ({ selectedLanguage, onUploadStart, onTranslationComplete }) 
   const [uploadError, setUploadError] = useState('');
   const fileInputRef = useRef(null);
 
+  // Configure API base URL
+  const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+
   const handleDrag = (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -20,7 +23,6 @@ const FileUpload = ({ selectedLanguage, onUploadStart, onTranslationComplete }) 
     e.preventDefault();
     e.stopPropagation();
     setDragActive(false);
-    
     if (e.dataTransfer.files && e.dataTransfer.files[0]) {
       handleFile(e.dataTransfer.files[0]);
     }
@@ -34,19 +36,25 @@ const FileUpload = ({ selectedLanguage, onUploadStart, onTranslationComplete }) 
   };
 
   const handleFile = async (file) => {
-    // Validate file type
-    const allowedTypes = ['audio/mp3', 'audio/wav', 'video/mp4', 'video/avi', 'video/mov'];
+    // Enhanced file validation
+    const allowedExtensions = ['mp3', 'wav', 'mp4', 'avi', 'mov', 'm4a', 'ogg'];
     const fileExtension = file.name.split('.').pop().toLowerCase();
-    const allowedExtensions = ['mp3', 'wav', 'mp4', 'avi', 'mov'];
     
     if (!allowedExtensions.includes(fileExtension)) {
-      setUploadError('Please upload MP3, WAV, MP4, AVI, or MOV files only');
+      setUploadError(`Please upload supported files: ${allowedExtensions.join(', ').toUpperCase()}`);
       return;
     }
 
-    // Validate file size (50MB)
-    if (file.size > 50 * 1024 * 1024) {
-      setUploadError('File size must be less than 50MB');
+    // File size validation (50MB)
+    const maxSize = 50 * 1024 * 1024;
+    if (file.size > maxSize) {
+      setUploadError(`File size must be less than ${maxSize / (1024 * 1024)}MB. Current size: ${(file.size / (1024 * 1024)).toFixed(2)}MB`);
+      return;
+    }
+
+    // Check if language is selected
+    if (!selectedLanguage) {
+      setUploadError('Please select a target language first');
       return;
     }
 
@@ -58,23 +66,42 @@ const FileUpload = ({ selectedLanguage, onUploadStart, onTranslationComplete }) 
       formData.append('file', file);
       formData.append('target_language', selectedLanguage);
 
-      const response = await axios.post('/upload', formData, {
+      console.log(`Uploading ${file.name} for translation to ${selectedLanguage}`);
+
+      const response = await axios.post(`${API_BASE_URL}/upload`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
+        timeout: 120000, // 2 minutes timeout
+        onUploadProgress: (progressEvent) => {
+          const percentCompleted = Math.round((progressEvent.loaded * 100) / progressEvent.total);
+          console.log(`Upload Progress: ${percentCompleted}%`);
+        }
       });
 
       if (response.data.status === 'success') {
+        console.log('Translation successful:', response.data);
         onTranslationComplete(response.data);
       } else {
         setUploadError('Translation failed. Please try again.');
       }
     } catch (error) {
       console.error('Upload error:', error);
-      setUploadError(
-        error.response?.data?.error || 
-        'Upload failed. Please check your connection and try again.'
-      );
+      
+      let errorMessage = 'Upload failed. Please check your connection and try again.';
+      
+      if (error.response) {
+        // Server responded with error
+        errorMessage = error.response.data?.error || `Server Error: ${error.response.status}`;
+      } else if (error.request) {
+        // Network error
+        errorMessage = 'Network error. Please check if the backend server is running on port 5000.';
+      } else if (error.code === 'ECONNABORTED') {
+        // Timeout error
+        errorMessage = 'Upload timeout. File might be too large or connection is slow.';
+      }
+      
+      setUploadError(errorMessage);
     }
   };
 
@@ -95,24 +122,23 @@ const FileUpload = ({ selectedLanguage, onUploadStart, onTranslationComplete }) 
         <input
           ref={fileInputRef}
           type="file"
-          accept=".mp3,.wav,.mp4,.avi,.mov"
+          accept=".mp3,.wav,.mp4,.avi,.mov,.m4a,.ogg"
           onChange={handleChange}
           style={{ display: 'none' }}
         />
-        
         <div className="upload-content">
-          <div className="upload-icon">📁</div>
-          <h3>Drag & Drop your file here</h3>
+          <span className="upload-icon">🎵</span>
+          <h3>Drag and drop your audio/video file here</h3>
           <p>or click to select file</p>
           <div className="supported-formats">
-            <small>Supported: MP3, WAV, MP4, AVI, MOV (Max: 50MB)</small>
+            <small>Supported formats: MP3, WAV, MP4, AVI, MOV, M4A, OGG (Max: 50MB)</small>
           </div>
         </div>
       </div>
-
+      
       {uploadError && (
         <div className="error-message">
-          ❌ {uploadError}
+          <strong>Error:</strong> {uploadError}
         </div>
       )}
     </div>
