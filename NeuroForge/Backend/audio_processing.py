@@ -5,20 +5,14 @@ from gtts import gTTS
 from pydub import AudioSegment
 import logging
 
-# Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# FFmpeg Configuration (update paths as needed)
-ffmpeg_path = r"C:\Users\itlab\Downloads\ffmpeg-2025-09-10-git-c1dc2e2b7c-essentials_build\ffmpeg-2025-09-10-git-c1dc2e2b7c-essentials_build\bin\ffmpeg.exe"
-ffprobe_path = r"C:\Users\itlab\Downloads\ffmpeg-2025-09-10-git-c1dc2e2b7c-essentials_build\ffmpeg-2025-09-10-git-c1dc2e2b7c-essentials_build\bin\ffprobe.exe"
+# Render/Linux automatically uses installed ffmpeg
+AudioSegment.converter = "ffmpeg"
+AudioSegment.ffprobe = "ffprobe"
 
-if os.path.exists(ffmpeg_path) and os.path.exists(ffprobe_path):
-    os.environ["PATH"] = os.path.dirname(ffmpeg_path) + ";" + os.environ["PATH"]
-    os.environ["PATH"] = os.path.dirname(ffprobe_path) + ";" + os.environ["PATH"]
-    AudioSegment.converter = ffmpeg_path
-    AudioSegment.ffprobe = ffprobe_path
-    logger.info("✅ FFmpeg configured successfully")
+logger.info("✅ FFmpeg configured for Render")
 else:
     logger.warning("⚠️ FFmpeg not found. Audio conversion may fail.")
 
